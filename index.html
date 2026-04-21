@@ -24,17 +24,17 @@
         </div>
       </div>
       <div class="nav">
-        <div class="nav-section">Investor</div>
-        <div class="nav-item active" data-screen="onboarding"><span>Investor KYC</span><span class="step-badge">1</span></div>
-        <div class="nav-item" data-screen="wallet"><span>Wallet & Capital</span><span class="step-badge">2</span></div>
-        <div class="nav-item" data-screen="asset"><span>Asset Detail</span><span class="step-badge">3</span></div>
-        <div class="nav-item" data-screen="invest"><span>Invest Flow</span><span class="step-badge">4</span></div>
-        <div class="nav-item" data-screen="dashboard"><span>Dashboard</span><span class="step-badge">5</span></div>
-        <div class="nav-item" data-screen="secondary"><span>Secondary Market</span><span class="step-badge">6</span></div>
-        <div class="nav-item" data-screen="settlement"><span>Settlement</span><span class="step-badge">7</span></div>
-        <div class="nav-section">SME</div>
-        <div class="nav-item" data-screen="sme"><span>SME Upload</span><span class="step-badge">8</span></div>
-        <div class="nav-item" data-screen="verification"><span>Verification</span><span class="step-badge">9</span></div>
+        <div class="nav-section" data-flow="investor">Investor</div>
+        <div class="nav-item active" data-screen="onboarding" data-flow="investor"><span>Investor KYC</span><span class="step-badge">1</span></div>
+        <div class="nav-item" data-screen="wallet" data-flow="investor"><span>Wallet & Capital</span><span class="step-badge">2</span></div>
+        <div class="nav-item" data-screen="asset" data-flow="investor"><span>Asset Detail</span><span class="step-badge">3</span></div>
+        <div class="nav-item" data-screen="invest" data-flow="investor"><span>Invest Flow</span><span class="step-badge">4</span></div>
+        <div class="nav-item" data-screen="dashboard" data-flow="investor"><span>Dashboard</span><span class="step-badge">5</span></div>
+        <div class="nav-item" data-screen="secondary" data-flow="investor"><span>Secondary Market</span><span class="step-badge">6</span></div>
+        <div class="nav-item" data-screen="settlement" data-flow="investor"><span>Settlement</span><span class="step-badge">7</span></div>
+        <div class="nav-section" data-flow="sme">SME</div>
+        <div class="nav-item" data-screen="sme" data-flow="sme"><span>SME Upload</span><span class="step-badge">8</span></div>
+        <div class="nav-item" data-screen="verification" data-flow="sme"><span>Verification</span><span class="step-badge">9</span></div>
       </div>
       <div class="sidebar-footer">
         <div class="user-pill">
@@ -57,14 +57,13 @@
         <div class="topbar">
           <div>
             <div class="topbar-title">Investor Onboarding</div>
-            <div class="topbar-sub">Identity verification & compliance · <a href="guide.html#how-to-invest" style="color: var(--blue); text-decoration: none;">Guide</a></div>
+            <div class="topbar-sub">Identity verification & compliance · <a href="guide.html#how-to-invest" style="color: var(--blue); text-decoration: none;">Why verification is needed</a></div>
           </div>
           <div class="topbar-divider"></div>
           <span class="topbar-badge badge-warning">KYC Pending</span>
           <div class="topbar-actions">
             <a class="btn btn-secondary" href="guide.html">Guide</a>
             <button
-              class="btn btn-secondary"
               class="btn btn-secondary theme-toggle" data-action="toggle-theme"
               
             >
@@ -336,7 +335,6 @@
           <div class="topbar-actions">
             <a class="btn btn-secondary" href="guide.html">Guide</a>
             <button
-              class="btn btn-secondary"
               class="btn btn-secondary theme-toggle" data-action="toggle-theme"
               
             >
@@ -590,7 +588,6 @@
           <div class="topbar-actions">
             <a class="btn btn-secondary" href="guide.html">Guide</a>
             <button
-              class="btn btn-secondary"
               class="btn btn-secondary theme-toggle" data-action="toggle-theme"
               
             >
@@ -737,7 +734,7 @@
                   </div>
                   <div class="stat-row" style="padding: 5px 0">
                     <span class="stat-key">Credit Rating</span>
-                    <span class="rating-badge rating-aaa">AAA</span>
+                    <span class="rating-badge rating-aaa" >AAA</span> <a href="guide.html#key-terms" style="color: var(--blue); text-decoration: none;">?</a>
                   </div>
                   <div class="stat-row" style="padding: 5px 0">
                     <span class="stat-key">Payment History</span>
@@ -792,7 +789,7 @@
             <div class="topbar-sub">Institutional-grade deal verification and risk transparency</div>
           </div>
           <div class="topbar-divider"></div>
-          <span class="topbar-badge badge-warning">3/4 Mandatory Checks Confirmed</span>
+          <span class="topbar-badge badge-warning">Nguyen Textile Co., Ltd -> Walmart Inc. · INV-2027-00847 · $125,000</span>
           <div class="topbar-actions">
             <a class="btn btn-secondary" href="guide.html#stakeholder-flow">Guide</a>
             <button class="btn btn-secondary theme-toggle" data-action="toggle-theme">☀️</button>
@@ -802,19 +799,28 @@
           <div class="grid-2 gap-20">
             <div>
               <div class="card mb-16">
-                <div class="card-header"><div class="card-label">Deal Identity</div></div>
-                <div class="stat-row"><span class="stat-key">SME</span><span class="stat-val">Thanh Cong Textile JSC</span></div>
-                <div class="stat-row"><span class="stat-key">Buyer</span><span class="stat-val">Walmart Inc. (AAA <a href="guide.html#key-terms" style="color:var(--blue);text-decoration:none;">?</a>)</span></div>
-                <div class="stat-row"><span class="stat-key">Invoice</span><span class="stat-val">INV-2027-00847</span></div>
-                <div class="stat-row"><span class="stat-key">Amount</span><span class="stat-val" style="font-family:var(--mono)">$125,000</span></div>
+                <div class="card-header"><div class="card-label">Verification Status</div><span class="verify-badge vb-green">Live Data</span></div>
+                <div class="grid-2 gap-8" style="margin-bottom:12px;">
+                  <div class="card" style="background:var(--bg3);border-left:3px solid var(--teal);padding:12px;"><div class="check-text">Shipment Confirmed</div><div class="check-sub">Goods in transit · Nov 3, 2027</div></div>
+                  <div class="card" style="background:var(--bg3);border-left:3px solid var(--teal);padding:12px;"><div class="check-text">Customs Validated</div><div class="check-sub">Export cleared · Nov 3, 2027</div></div>
+                  <div class="card" style="background:var(--bg3);border-left:3px solid var(--teal);padding:12px;"><div class="check-text">Invoice Approved</div><div class="check-sub">Matched with PO · Nov 4, 2027</div></div>
+                  <div class="card" style="background:var(--bg3);border-left:3px solid var(--amber);padding:12px;"><div class="check-text">Insurance Pending</div><div class="check-sub">In progress · ETA Nov 6, 2027</div></div>
+                </div>
+                <div class="card-label" style="margin-bottom:10px">Verification Checklist</div>
+                <div class="check-list">
+                  <div class="check-item"><div class="check-icon check-pass">✓</div><div><div class="check-text">Logistics Confirmation</div><div class="check-sub">Source: DHL Express</div></div><span style="margin-left:auto;color:var(--text3);font-size:11px">Nov 3, 2027</span></div>
+                  <div class="check-item"><div class="check-icon check-pass">✓</div><div><div class="check-text">Customs Clearance</div><div class="check-sub">Source: Ho Chi Minh Port Customs</div></div><span style="margin-left:auto;color:var(--text3);font-size:11px">Nov 3, 2027</span></div>
+                  <div class="check-item"><div class="check-icon check-pass">✓</div><div><div class="check-text">Invoice Validation</div><div class="check-sub">Source: Buyer PO Match Engine</div></div><span style="margin-left:auto;color:var(--text3);font-size:11px">Nov 4, 2027</span></div>
+                  <div class="check-item"><div class="check-icon check-spin">◐</div><div><div class="check-text">Trade Credit Insurance</div><div class="check-sub">Source: Euler Hermes</div></div><span style="margin-left:auto;color:var(--amber);font-size:11px">In progress (ETA Nov 6, 2027)</span></div>
+                </div>
               </div>
               <div class="card mb-16">
-                <div class="card-label" style="margin-bottom:10px">Mandatory Verification Checklist</div>
-                <div class="check-list">
-                  <div class="check-item"><div class="check-icon check-pass">✓</div><div><div class="check-text">Shipment Confirmed</div><div class="check-sub">Source: DHL API · Actor: Logistics Oracle</div></div><span style="margin-left:auto;color:var(--text3);font-size:11px">Apr 08, 2027</span></div>
-                  <div class="check-item"><div class="check-icon check-pass">✓</div><div><div class="check-text">Customs Cleared</div><div class="check-sub">Source: Vietnam Customs · Actor: Customs Validator</div></div><span style="margin-left:auto;color:var(--text3);font-size:11px">Apr 09, 2027</span></div>
-                  <div class="check-item"><div class="check-icon check-pass">✓</div><div><div class="check-text">Invoice Matched</div><div class="check-sub">Source: Buyer PO Registry · Actor: Reconciliation Engine</div></div><span style="margin-left:auto;color:var(--text3);font-size:11px">Apr 10, 2027</span></div>
-                  <div class="check-item"><div class="check-icon check-spin">◐</div><div><div class="check-text">Insurance Endorsement</div><div class="check-sub">Source: Euler Hermes · Actor: Insurance Gateway</div></div><span style="margin-left:auto;color:var(--amber);font-size:11px">Pending Apr 11, 2027</span></div>
+                <div class="card-label" style="margin-bottom:10px">Data Providers</div>
+                <div class="grid-4 gap-8">
+                  <div class="card" style="background:var(--bg3);text-align:center;padding:10px;"><div class="check-text">DHL Express</div><div class="check-sub">Logistics API</div></div>
+                  <div class="card" style="background:var(--bg3);text-align:center;padding:10px;"><div class="check-text">Vietnam Customs</div><div class="check-sub">Customs API</div></div>
+                  <div class="card" style="background:var(--bg3);text-align:center;padding:10px;"><div class="check-text">Dun & Bradstreet</div><div class="check-sub">Credit Bureau</div></div>
+                  <div class="card" style="background:var(--bg3);text-align:center;padding:10px;"><div class="check-text">Euler Hermes</div><div class="check-sub">Insurance Feed</div></div>
                 </div>
               </div>
             </div>
@@ -850,7 +856,7 @@
           <div>
             <div class="topbar-title">Asset Detail</div>
             <div class="topbar-sub">
-              INV-2024-00847 · Textile Export · Vietnam → USA
+              INV-2024-00847 · Textile Export · Vietnam → USA · <a href="guide.html#stakeholder-flow" style="color: var(--blue); text-decoration: none;">How this investment works</a>
             </div>
           </div>
           <div class="topbar-divider"></div>
@@ -858,7 +864,6 @@
           <div class="topbar-actions">
             <a class="btn btn-secondary" href="guide.html">Guide</a>
             <button
-              class="btn btn-secondary"
               class="btn btn-secondary theme-toggle" data-action="toggle-theme"
               
             >
@@ -945,7 +950,7 @@
                       border-radius: var(--r);
                     "
                   >
-                    <div class="yield-num">12%</div>
+                    <div class="yield-num">~17%</div>
                     <div class="yield-label">Annual Yield</div>
                   </div>
                   <div
@@ -1057,7 +1062,7 @@
                 <div class="alert alert-success" style="margin-bottom: 0">
                   <span>✓</span>
                   <span
-                    ><strong>4.2% return over 90 days</strong> — No hidden fees.
+                    ><strong>~4.2% return over 90 days</strong> — No hidden fees.
                     No carry charges. Fixed return at maturity.</span
                   >
                 </div>
@@ -1081,7 +1086,7 @@
                       style="width: 100%; background: var(--teal)"
                     ></div>
                   </div>
-                  <div class="bench-val" style="color: var(--teal)">12%</div>
+                  <div class="bench-val" style="color: var(--teal)">~17%</div>
                 </div>
                 <div class="bench-row">
                   <div class="bench-label">Gov. Bonds</div>
@@ -1149,10 +1154,23 @@
                 </div>
               <div class="card mb-16">
                 <div class="card-label" style="margin-bottom: 10px">Historical Performance</div>
-                <div class="stat-row"><span class="stat-key">Completed Deals</span><span class="stat-val">23</span></div>
-                <div class="stat-row"><span class="stat-key">Average Settlement Delay</span><span class="stat-val green">1.2 days</span></div>
-                <div class="stat-row"><span class="stat-key">Default Incidents</span><span class="stat-val green">0</span></div>
-                <div class="stat-row"><span class="stat-key">Investor Net Return</span><span class="stat-val green">+16.4% annualized</span></div>
+                <div style="background: var(--bg3); border: 1px solid var(--border); border-radius: var(--r); padding: 12px; margin-bottom: 12px;">
+                  <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text3);margin-bottom:6px;">
+                    <span>Nov 2025</span><span>Apr 2026</span>
+                  </div>
+                  <svg viewBox="0 0 520 120" style="width:100%;height:120px;display:block;">
+                    <polyline points="20,100 120,84 220,62 320,44 420,30 500,18" fill="none" stroke="var(--blue)" stroke-width="3" />
+                    <polyline points="20,102 120,92 220,74 320,58 420,40 500,26" fill="none" stroke="var(--teal)" stroke-width="2" stroke-dasharray="5 4" />
+                    <circle cx="500" cy="18" r="4" fill="var(--blue)" />
+                  </svg>
+                  <div class="stat-row" style="margin-top:4px;"><span class="stat-key">Yield Trend</span><span class="stat-val">1.15% → 2.9%</span></div>
+                </div>
+                <div class="card-label" style="margin-bottom: 8px">Recent On-Chain Events</div>
+                <div class="check-list">
+                  <div class="check-item"><div><div class="check-text">Payment Settled</div><div class="check-sub">Apr 15, 2026 · Tx: 0x1a2b...4a5b</div></div><div class="invest-return">$131,250</div></div>
+                  <div class="check-item"><div><div class="check-text">Payment Settled</div><div class="check-sub">Apr 01, 2026 · Tx: 0x7f3b...9e2f</div></div><div class="invest-return">$125,000</div></div>
+                  <div class="check-item"><div><div class="check-text">Repayment</div><div class="check-sub">Mar 05, 2026 · Tx: 0x3f4a...6f7a</div></div><div class="invest-return">$45,062</div></div>
+                </div>
               </div>
               <div class="card">
                   <div class="card-label" style="margin-bottom: 10px">
@@ -1168,7 +1186,7 @@
                   </div>
                   <div class="stat-row">
                     <span class="stat-key">Credit Rating</span
-                    ><span class="rating-badge rating-aaa">AAA</span> <a href="guide.html#key-terms" style="color: var(--blue); text-decoration: none;">?</a>
+                    ><span class="rating-badge rating-aaa" >AAA</span> <a href="guide.html#key-terms" style="color: var(--blue); text-decoration: none;">?</a>
                   </div>
                   <div class="stat-row">
                     <span class="stat-key">On-time Payment</span
@@ -1473,7 +1491,7 @@
           <div>
             <div class="topbar-title">Invest</div>
             <div class="topbar-sub">
-              Walmart Inc. · 90-day receivable · ~17% p.a. · <a href="guide.html#how-to-invest" style="color: var(--blue); text-decoration: none;">Guide</a>
+              Walmart Inc. · 90-day receivable · ~17% p.a. · <a href="guide.html#how-to-invest" style="color: var(--blue); text-decoration: none;">How to invest</a>
             </div>
           </div>
           <div class="topbar-divider"></div>
@@ -1481,7 +1499,6 @@
           <div class="topbar-actions">
             <a class="btn btn-secondary" href="guide.html">Guide</a>
             <button
-              class="btn btn-secondary"
               class="btn btn-secondary theme-toggle" data-action="toggle-theme"
               
             >
@@ -1731,9 +1748,33 @@
               <div class="card">
                 <div class="card-label" style="margin-bottom:10px">Asset Evaluation</div>
                 <div class="check-list">
-                  <div class="check-item"><div><div class="check-text">Walmart Invoice Pool A</div><div class="check-sub">Default 0.6% · Volatility 4.1% · Hist Return 15.9%</div></div><div><div class="verify-badge vb-green">Score 91</div><div class="check-sub">APY 17.0% · $125k</div></div></div>
-                  <div class="check-item"><div><div class="check-text">H&M Vendor Batch C</div><div class="check-sub">Default 0.8% · Volatility 4.8% · Hist Return 14.8%</div></div><div><div class="verify-badge vb-green">Score 88</div><div class="check-sub">APY 16.2% · $97k</div></div></div>
-                  <div class="check-item"><div><div class="check-text">Carrefour Food Imports</div><div class="check-sub">Default 1.6% · Volatility 6.2% · Hist Return 12.9%</div></div><div><div class="verify-badge vb-amber">Score 76</div><div class="check-sub">APY 13.0% · $84k</div></div></div>
+                  <div class="check-item" style="align-items:flex-start;gap:14px;">
+                    <div style="width:44px;height:44px;border-radius:50%;border:5px solid var(--teal);display:flex;align-items:center;justify-content:center;font-weight:600;">95</div>
+                    <div style="flex:1">
+                      <div class="check-text">US Treasury Bond 10Y</div>
+                      <div class="check-sub">Default Prob. 0.1% · Volatility 4.2 · Hist Return +4.3% · APY 4.15%</div>
+                      <div class="check-sub" style="margin-top:4px;">Total Value: $50.00M</div>
+                    </div>
+                    <span class="verify-badge vb-green">Low</span>
+                  </div>
+                  <div class="check-item" style="align-items:flex-start;gap:14px;">
+                    <div style="width:44px;height:44px;border-radius:50%;border:5px solid var(--amber);display:flex;align-items:center;justify-content:center;font-weight:600;">62</div>
+                    <div style="flex:1">
+                      <div class="check-text">Real Estate Development Token</div>
+                      <div class="check-sub">Default Prob. 8.7% · Volatility 24.3 · Hist Return +12.4% · APY 9.25%</div>
+                      <div class="check-sub" style="margin-top:4px;">Total Value: $8.75M</div>
+                    </div>
+                    <span class="verify-badge vb-amber">Medium</span>
+                  </div>
+                  <div class="check-item" style="align-items:flex-start;gap:14px;">
+                    <div style="width:44px;height:44px;border-radius:50%;border:5px solid var(--red);display:flex;align-items:center;justify-content:center;font-weight:600;">43</div>
+                    <div style="flex:1">
+                      <div class="check-text">Tech Startup Convertible Note</div>
+                      <div class="check-sub">Default Prob. 18.5% · Volatility 42.8 · Hist Return +24.6% · APY 15.50%</div>
+                      <div class="check-sub" style="margin-top:4px;">Total Value: $3.10M</div>
+                    </div>
+                    <span class="verify-badge vb-red">High</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1755,7 +1796,6 @@
           <div class="topbar-actions">
             <a class="btn btn-secondary" href="guide.html">Guide</a>
             <button
-              class="btn btn-secondary"
               class="btn btn-secondary theme-toggle" data-action="toggle-theme"
               
             >
@@ -2084,7 +2124,6 @@
           <div class="topbar-actions">
             <a class="btn btn-secondary" href="guide.html">Guide</a>
             <button
-              class="btn btn-secondary"
               class="btn btn-secondary theme-toggle" data-action="toggle-theme"
               
             >

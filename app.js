@@ -1,8 +1,19 @@
+
+const investorScreens = new Set(['onboarding', 'wallet', 'asset', 'invest', 'dashboard', 'secondary', 'settlement']);
+
+function updateFlowState(screenId) {
+  const sidebar = document.querySelector('.sidebar');
+  if (!sidebar) return;
+  const flow = investorScreens.has(screenId) ? 'investor' : 'sme';
+  sidebar.setAttribute('data-active-flow', flow);
+}
+
 function showScreen(id, navEl) {
   document.querySelectorAll('.screen').forEach((s) => s.classList.remove('active'));
   document.querySelectorAll('.nav-item').forEach((n) => n.classList.remove('active'));
   const screen = document.getElementById(`screen-${id}`);
   if (screen) screen.classList.add('active');
+  updateFlowState(id);
   if (navEl) navEl.classList.add('active');
 }
 
@@ -40,8 +51,8 @@ function updateInvest(amount) {
   setText('preview-invest', money(amt));
   setText('preview-return', money(returnAmt));
   setText('preview-gain', `+$${gain.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`);
-  setText('preview-tokens', tokens);
-  setText('token-display', `${tokens} tokens`);
+  setText('preview-tokens', `~${tokens}`);
+  setText('token-display', `~${tokens} tokens`);
 }
 
 document.addEventListener('click', (event) => {
@@ -97,6 +108,9 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     updateThemeButtons('☀️');
   }
+
+  const activeScreen = document.querySelector('.screen.active');
+  if (activeScreen && activeScreen.id) updateFlowState(activeScreen.id.replace('screen-', ''));
 
   const investAmount = document.getElementById('invest-amount');
   if (investAmount) updateInvest(investAmount.value);

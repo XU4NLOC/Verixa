@@ -11,16 +11,13 @@
   <body>
     <main class="main" style="margin-left: 0; width: 100%">
       <div class="topbar">
-        <div>
-          <div class="topbar-title">Platform Guide</div>
-          <div class="topbar-sub">How VIFC works for Investor and SME participants</div>
-        </div>
+        <div><div class="topbar-title">Platform Guide</div><div class="topbar-sub">Reference guide for product flow and stakeholder operations</div></div>
         <div class="topbar-actions">
           <a class="btn btn-secondary" href="index.html">Back to App</a>
           <button class="btn btn-secondary theme-toggle" data-action="toggle-theme">☀️</button>
         </div>
       </div>
-      <div class="content" style="display:grid;grid-template-columns:240px 1fr;gap:20px">
+      <div class="content" style="display:grid;grid-template-columns:260px 1fr;gap:20px;align-items:start;">
         <aside class="card" style="position:sticky;top:18px;height:fit-content">
           <div class="card-label" style="margin-bottom:10px">Quick Links</div>
           <div class="check-list">
@@ -33,31 +30,81 @@
         <section>
           <article id="platform-overview" class="card mb-16">
             <div class="card-label" style="margin-bottom:10px">Platform Overview</div>
-            <p>VIFC tokenizes verified trade receivables so investors can fund short-term invoices and receive fixed returns at maturity. The platform combines KYC, verification, asset review, tokenized investing, secondary exits, and settlement in one client-side workflow.</p>
+            <div class="check-list">
+              <div class="check-item"><div><div class="check-text">Dashboard</div><div class="check-sub">Portfolio overview: total invested, active investments, upcoming cash flows.</div></div></div>
+              <div class="check-item"><div><div class="check-text">Wallet & Capital</div><div class="check-sub">Wallet balance, capital availability, and deposit/withdraw history.</div></div></div>
+              <div class="check-item"><div><div class="check-text">Asset Marketplace</div><div class="check-sub">Discover investable assets with yield, tenor, and risk snapshots.</div></div></div>
+              <div class="check-item"><div><div class="check-text">Asset Detail</div><div class="check-sub">Pricing, expected return, SME profile, buyer quality, and capital flow timeline.</div></div></div>
+              <div class="check-item"><div><div class="check-text">Invest Flow</div><div class="check-sub">Input investment amount, preview token output, and confirm transaction.</div></div></div>
+              <div class="check-item"><div><div class="check-text">Verification</div><div class="check-sub">Shipment, customs, invoice, and insurance verification status with timestamps.</div></div></div>
+              <div class="check-item"><div><div class="check-text">Secondary Market</div><div class="check-sub">Sell or buy receivable positions before maturity.</div></div></div>
+              <div class="check-item"><div><div class="check-text">Settlement</div><div class="check-sub">Track payout execution and wallet credit when deal matures.</div></div></div>
+            </div>
           </article>
+
           <article id="how-to-invest" class="card mb-16">
             <div class="card-label" style="margin-bottom:10px">How to Invest</div>
             <div class="check-list">
-              <div class="check-item"><div class="check-icon check-pass">1</div><div><div class="check-text">Complete Investor KYC</div><div class="check-sub">Identity, risk profile, and compliance checks</div></div></div>
-              <div class="check-item"><div class="check-icon check-pass">2</div><div><div class="check-text">Fund Wallet</div><div class="check-sub">Deposit capital and review allocation limits</div></div></div>
-              <div class="check-item"><div class="check-icon check-pass">3</div><div><div class="check-text">Review Asset Detail</div><div class="check-sub">Confirm discount, tenor, buyer quality, and historical performance</div></div></div>
-              <div class="check-item"><div class="check-icon check-pass">4</div><div><div class="check-text">Invest & Mint Tokens</div><div class="check-sub">Receive tokens at purchase price and settle at face value maturity</div></div></div>
+              <div class="check-item"><div class="check-icon check-pass">1</div><div class="check-text">Open Asset Marketplace and browse available assets.</div></div>
+              <div class="check-item"><div class="check-icon check-pass">2</div><div class="check-text">Select one asset to open Asset Detail.</div></div>
+              <div class="check-item"><div class="check-icon check-pass">3</div><div class="check-text">Read yield, tenor, risk, SME, and buyer information.</div></div>
+              <div class="check-item"><div class="check-icon check-pass">4</div><div class="check-text">Click <strong>Invest</strong>.</div></div>
+              <div class="check-item"><div class="check-icon check-pass">5</div><div class="check-text">System opens Invest Flow.</div></div>
+              <div class="check-item"><div class="check-icon check-pass">6</div><div class="check-text">Enter investment amount.</div></div>
+              <div class="check-item"><div class="check-icon check-pass">7</div><div class="check-text">Review preview: issued tokens, expected payout, and profit.</div></div>
+              <div class="check-item"><div class="check-icon check-pass">8</div><div class="check-text">Double-check all details.</div></div>
+              <div class="check-item"><div class="check-icon check-pass">9</div><div class="check-text">Click confirm to complete investment.</div></div>
+              <div class="check-item"><div class="check-icon check-pass">10</div><div class="check-text">Asset position is added to Portfolio.</div></div>
+              <div class="check-item"><div class="check-icon check-pass">11</div><div class="check-text">Hold the asset until maturity.</div></div>
+              <div class="check-item"><div class="check-icon check-pass">12</div><div class="check-text">When buyer pays, settlement is executed.</div></div>
+              <div class="check-item"><div class="check-icon check-pass">13</div><div class="check-text">Principal and profit are returned to investor wallet.</div></div>
             </div>
           </article>
+
           <article id="stakeholder-flow" class="card mb-16">
             <div class="card-label" style="margin-bottom:10px">How It Works (By Stakeholder)</div>
-            <div class="stat-row"><span class="stat-key">SME</span><span class="stat-val">Uploads invoice and shipment evidence to request financing.</span></div>
-            <div class="stat-row"><span class="stat-key">Verification Network</span><span class="stat-val">Validates shipment, customs, invoice and insurance data.</span></div>
-            <div class="stat-row"><span class="stat-key">Investor</span><span class="stat-val">Evaluates risk/return and purchases tokenized receivable units.</span></div>
-            <div class="stat-row"><span class="stat-key">Buyer</span><span class="stat-val">Pays invoice at maturity; principal and return are distributed.</span></div>
+            <div class="card-label" style="margin-bottom:8px">SME Flow</div>
+            <div class="check-list" style="margin-bottom:12px;">
+              <div class="check-item"><div class="check-icon check-pass">1</div><div class="check-text">Upload invoice.</div></div>
+              <div class="check-item"><div class="check-icon check-pass">2</div><div class="check-text">Upload supporting documents (PO, shipping docs).</div></div>
+              <div class="check-item"><div class="check-icon check-pass">3</div><div class="check-text">Submit for verification.</div></div>
+              <div class="check-item"><div class="check-icon check-pass">4</div><div class="check-text">Platform + third parties validate data.</div></div>
+              <div class="check-item"><div class="check-icon check-pass">5</div><div class="check-text">If approved, asset is listed on marketplace.</div></div>
+              <div class="check-item"><div class="check-icon check-pass">6</div><div class="check-text">SME receives early liquidity from investors.</div></div>
+            </div>
+
+            <div class="card-label" style="margin-bottom:8px">Investor Flow</div>
+            <div class="check-list" style="margin-bottom:12px;">
+              <div class="check-item"><div class="check-icon check-pass">1</div><div class="check-text">Browse verified assets.</div></div>
+              <div class="check-item"><div class="check-icon check-pass">2</div><div class="check-text">Choose target asset.</div></div>
+              <div class="check-item"><div class="check-icon check-pass">3</div><div class="check-text">Invest through Invest Flow.</div></div>
+              <div class="check-item"><div class="check-icon check-pass">4</div><div class="check-text">Position appears in portfolio.</div></div>
+              <div class="check-item"><div class="check-icon check-pass">5</div><div class="check-text">Hold until maturity.</div></div>
+              <div class="check-item"><div class="check-icon check-pass">6</div><div class="check-text">Receive payout after settlement.</div></div>
+            </div>
+
+            <div class="card-label" style="margin-bottom:8px">Verification / Regulatory</div>
+            <div class="check-list">
+              <div class="check-item"><div class="check-icon check-pass">1</div><div class="check-text">Perform eKYC for users.</div></div>
+              <div class="check-item"><div class="check-icon check-pass">2</div><div class="check-text">Run AML / sanctions screening.</div></div>
+              <div class="check-item"><div class="check-icon check-pass">3</div><div class="check-text">Validate invoice and trade records.</div></div>
+              <div class="check-item"><div class="check-icon check-pass">4</div><div class="check-text">Confirm shipment, customs, and buyer records.</div></div>
+              <div class="check-item"><div class="check-icon check-pass">5</div><div class="check-text">Approve asset for listing.</div></div>
+            </div>
           </article>
+
           <article id="key-terms" class="card">
             <div class="card-label" style="margin-bottom:10px">Key Terms</div>
-            <div class="stat-row"><span class="stat-key">Credit Rating</span><span class="stat-val">Third-party assessed buyer credit quality.</span></div>
-            <div class="stat-row"><span class="stat-key">AAA</span><span class="stat-val">Highest credit quality, very low default probability.</span></div>
-            <div class="stat-row"><span class="stat-key">AA / A</span><span class="stat-val">Strong to upper-medium quality with low-to-moderate risk.</span></div>
-            <div class="stat-row"><span class="stat-key">BBB</span><span class="stat-val">Investment grade baseline; adequate capacity to pay.</span></div>
-            <div class="stat-row"><span class="stat-key">BB / B</span><span class="stat-val">Speculative quality with elevated credit risk.</span></div>
+            <div class="card-label" style="margin-bottom:8px">Credit Rating</div>
+            <div class="check-list">
+              <div class="check-item"><div class="check-text"><strong>AAA</strong> - Very low risk, strongest repayment capacity.</div></div>
+              <div class="check-item"><div class="check-text"><strong>AA</strong> - Low risk, very strong repayment capacity.</div></div>
+              <div class="check-item"><div class="check-text"><strong>A</strong> - Low-to-moderate risk, strong repayment ability.</div></div>
+              <div class="check-item"><div class="check-text"><strong>BBB</strong> - Medium risk, adequate repayment capacity.</div></div>
+              <div class="check-item"><div class="check-text"><strong>BB</strong> - Elevated risk, speculative profile.</div></div>
+              <div class="check-item"><div class="check-text"><strong>B</strong> - High risk, weak repayment resilience.</div></div>
+            </div>
+            <div class="alert alert-info" style="margin-top:10px;"><span>Note:</span><span>Credit rating applies to the <strong>Buyer</strong> (payer) and can be sourced from third-party bureaus or internal scoring systems.</span></div>
           </article>
         </section>
       </div>

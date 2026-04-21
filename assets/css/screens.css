@@ -313,3 +313,19 @@
         color: var(--teal);
       }
     
+
+/* Flow highlight state */
+.sidebar[data-active-flow="investor"] .nav-item[data-flow="sme"],
+.sidebar[data-active-flow="investor"] .nav-section[data-flow="sme"] {
+  opacity: 0.38;
+}
+
+.sidebar[data-active-flow="sme"] .nav-item[data-flow="investor"],
+.sidebar[data-active-flow="sme"] .nav-section[data-flow="investor"] {
+  opacity: 0.38;
+}
+
+.sidebar[data-active-flow="investor"] .nav-section[data-flow="investor"],
+.sidebar[data-active-flow="sme"] .nav-section[data-flow="sme"] {
+  color: var(--teal);
+}
