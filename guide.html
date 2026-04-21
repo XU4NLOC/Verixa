@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VIFC Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="main" style="margin-left: 0; width: 100%">
+      <div class="topbar">
+        <div>
+          <div class="topbar-title">Platform Guide</div>
+          <div class="topbar-sub">How VIFC works for Investor and SME participants</div>
+        </div>
+        <div class="topbar-actions">
+          <a class="btn btn-secondary" href="index.html">Back to App</a>
+          <button class="btn btn-secondary theme-toggle" data-action="toggle-theme">☀️</button>
+        </div>
+      </div>
+      <div class="content" style="display:grid;grid-template-columns:240px 1fr;gap:20px">
+        <aside class="card" style="position:sticky;top:18px;height:fit-content">
+          <div class="card-label" style="margin-bottom:10px">Quick Links</div>
+          <div class="check-list">
+            <a class="btn btn-secondary" href="#platform-overview">Platform Overview</a>
+            <a class="btn btn-secondary" href="#how-to-invest">How to Invest</a>
+            <a class="btn btn-secondary" href="#stakeholder-flow">How It Works</a>
+            <a class="btn btn-secondary" href="#key-terms">Key Terms</a>
+          </div>
+        </aside>
+        <section>
+          <article id="platform-overview" class="card mb-16">
+            <div class="card-label" style="margin-bottom:10px">Platform Overview</div>
+            <p>VIFC tokenizes verified trade receivables so investors can fund short-term invoices and receive fixed returns at maturity. The platform combines KYC, verification, asset review, tokenized investing, secondary exits, and settlement in one client-side workflow.</p>
+          </article>
+          <article id="how-to-invest" class="card mb-16">
+            <div class="card-label" style="margin-bottom:10px">How to Invest</div>
+            <div class="check-list">
+              <div class="check-item"><div class="check-icon check-pass">1</div><div><div class="check-text">Complete Investor KYC</div><div class="check-sub">Identity, risk profile, and compliance checks</div></div></div>
+              <div class="check-item"><div class="check-icon check-pass">2</div><div><div class="check-text">Fund Wallet</div><div class="check-sub">Deposit capital and review allocation limits</div></div></div>
+              <div class="check-item"><div class="check-icon check-pass">3</div><div><div class="check-text">Review Asset Detail</div><div class="check-sub">Confirm discount, tenor, buyer quality, and historical performance</div></div></div>
+              <div class="check-item"><div class="check-icon check-pass">4</div><div><div class="check-text">Invest & Mint Tokens</div><div class="check-sub">Receive tokens at purchase price and settle at face value maturity</div></div></div>
+            </div>
+          </article>
+          <article id="stakeholder-flow" class="card mb-16">
+            <div class="card-label" style="margin-bottom:10px">How It Works (By Stakeholder)</div>
+            <div class="stat-row"><span class="stat-key">SME</span><span class="stat-val">Uploads invoice and shipment evidence to request financing.</span></div>
+            <div class="stat-row"><span class="stat-key">Verification Network</span><span class="stat-val">Validates shipment, customs, invoice and insurance data.</span></div>
+            <div class="stat-row"><span class="stat-key">Investor</span><span class="stat-val">Evaluates risk/return and purchases tokenized receivable units.</span></div>
+            <div class="stat-row"><span class="stat-key">Buyer</span><span class="stat-val">Pays invoice at maturity; principal and return are distributed.</span></div>
+          </article>
+          <article id="key-terms" class="card">
+            <div class="card-label" style="margin-bottom:10px">Key Terms</div>
+            <div class="stat-row"><span class="stat-key">Credit Rating</span><span class="stat-val">Third-party assessed buyer credit quality.</span></div>
+            <div class="stat-row"><span class="stat-key">AAA</span><span class="stat-val">Highest credit quality, very low default probability.</span></div>
+            <div class="stat-row"><span class="stat-key">AA / A</span><span class="stat-val">Strong to upper-medium quality with low-to-moderate risk.</span></div>
+            <div class="stat-row"><span class="stat-key">BBB</span><span class="stat-val">Investment grade baseline; adequate capacity to pay.</span></div>
+            <div class="stat-row"><span class="stat-key">BB / B</span><span class="stat-val">Speculative quality with elevated credit risk.</span></div>
+          </article>
+        </section>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
