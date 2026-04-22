@@ -1,6 +1,19 @@
 
 const investorScreens = new Set(['onboarding', 'wallet', 'asset', 'invest', 'dashboard', 'secondary', 'settlement']);
 
+function setMobileNavState(isOpen) {
+  document.body.classList.toggle('mobile-nav-open', isOpen);
+  const toggle = document.querySelector('.mobile-nav-toggle');
+  if (toggle) {
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    toggle.textContent = isOpen ? '✕' : '☰';
+  }
+}
+
+function closeMobileNav() {
+  setMobileNavState(false);
+}
+
 function updateFlowState(screenId) {
   const sidebar = document.querySelector('.sidebar');
   if (!sidebar) return;
@@ -59,6 +72,7 @@ document.addEventListener('click', (event) => {
   const nav = event.target.closest('.nav-item[data-screen]');
   if (nav) {
     showScreen(nav.dataset.screen, nav);
+    closeMobileNav();
     return;
   }
 
@@ -68,12 +82,26 @@ document.addEventListener('click', (event) => {
     const id = jump.dataset.screenJump;
     const nav = document.querySelector(`.nav-item[data-screen="${id}"]`);
     showScreen(id, nav);
+    closeMobileNav();
     return;
   }
 
   const action = event.target.closest('[data-action="toggle-theme"]');
   if (action) {
     toggleTheme();
+    return;
+  }
+
+  const mobileNavToggle = event.target.closest('[data-action="toggle-mobile-nav"]');
+  if (mobileNavToggle) {
+    const isOpen = document.body.classList.contains('mobile-nav-open');
+    setMobileNavState(!isOpen);
+    return;
+  }
+
+  const closeNav = event.target.closest('[data-action="close-mobile-nav"]');
+  if (closeNav) {
+    closeMobileNav();
     return;
   }
 
@@ -114,4 +142,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const investAmount = document.getElementById('invest-amount');
   if (investAmount) updateInvest(investAmount.value);
+
+  if (window.innerWidth > 900) closeMobileNav();
+});
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 900) closeMobileNav();
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') closeMobileNav();
 });
